@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>OneSchool &mdash; Website by Colorlib</title>
+    <title>SentimentAnalysis</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -44,15 +44,14 @@
       
       <div class="container-fluid">
         <div class="d-flex align-items-center">
-          <div class="site-logo mr-auto w-25"><a href="/">OneSchool</a></div>
+          <div class="site-logo mr-auto w-25"><a href="/">SentimentAnalysis</a></div>
 
           <div class="mx-auto text-center">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
                 <li><a href="#home-section" class="nav-link">Home</a></li>
                 <li><a href="#courses-section" class="nav-link">Courses</a></li>
-                <li><a href="#programs-section" class="nav-link">Programs</a></li>
-                <li><a href="#teachers-section" class="nav-link">Teachers</a></li>
+                <li><a href="#programs-section" class="nav-link">Libraries</a></li>
               </ul>
             </nav>
           </div>
@@ -78,20 +77,17 @@
             <div class="col-12">
               <div class="row align-items-center">
                 <div class="col-lg-6 mb-4">
-                  <h1  data-aos="fade-up" data-aos-delay="100">Learn From The Expert</h1>
-                  <p class="mb-4"  data-aos="fade-up" data-aos-delay="200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas necessitatibus.</p>
-                  <p data-aos="fade-up" data-aos-delay="300"><a href="#" class="btn btn-primary py-3 px-5 btn-pill">Admission Now</a></p>
-
+                  <img src="./static/images/undraw_tweetstorm.svg" style="height: 75%; width: 75%" data-aos="fade-up" data-aos-delay="100" />
                 </div>
 
                 <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="500">
                   <form action="{{ url_for('analyze') }}" method="post" class="form-box">
-                    <h3 class="h4 text-black mb-4">Sign Up</h3>
+                    <h3 class="h4 text-black mb-4">Search</h3>
                     <div class="form-group">
                       <input type="text" class="form-control" placeholder="Topic" name="search">
                     </div>
                     <div class="form-group">
-                      <input type="submit" class="btn btn-primary btn-pill" value="Sign up">
+                      <input type="submit" class="btn btn-primary btn-pill" value="Go">
                     </div>
                   </form>
 
@@ -120,139 +116,52 @@
       <div class="container">
         <div class="row mb-5 justify-content-center">
           <div class="col-lg-7 text-center"  data-aos="fade-up" data-aos-delay="">
-            <h2 class="section-title">Our Programs</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam repellat aut neque! Doloribus sunt non aut reiciendis, vel recusandae obcaecati hic dicta repudiandae in quas quibusdam ullam, illum sed veniam!</p>
+            <h2 class="section-title">Libraries</h2>
           </div>
         </div>
         <div class="row mb-5 align-items-center">
           <div class="col-lg-7 mb-5" data-aos="fade-up" data-aos-delay="100">
-            <img src="./static/images/undraw_youtube_tutorial.svg" alt="Image" class="img-fluid">
+            <img src="./static/images/undraw_code_review.svg" alt="Image" class="img-fluid">
           </div>
           <div class="col-lg-4 ml-auto" data-aos="fade-up" data-aos-delay="200">
-            <h2 class="text-black mb-4">We Are Excellent In Education</h2>
-            <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem maxime nam porro possimus fugiat quo molestiae illo.</p>
-
-            <div class="d-flex align-items-center custom-icon-wrap mb-3">
-              <span class="custom-icon-inner mr-3"><span class="icon icon-graduation-cap"></span></span>
-              <div><h3 class="m-0">22,931 Yearly Graduates</h3></div>
-            </div>
-
-            <div class="d-flex align-items-center custom-icon-wrap">
-              <span class="custom-icon-inner mr-3"><span class="icon icon-university"></span></span>
-              <div><h3 class="m-0">150 Universities Worldwide</h3></div>
-            </div>
-
+            <h2 class="text-black mb-4">Flask</h2>
+            <p class="mb-4">It is a lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications. It began as a simple wrapper around Werkzeug and Jinja and has become one of the most popular Python web application frameworks.</p>
           </div>
         </div>
 
         <div class="row mb-5 align-items-center">
           <div class="col-lg-7 mb-5 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
-            <img src="./static/images/undraw_teaching.svg" alt="Image" class="img-fluid">
+            <img src="./static/images/undraw_online_discussion.svg" alt="Image" class="img-fluid">
           </div>
           <div class="col-lg-4 mr-auto order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-            <h2 class="text-black mb-4">Strive for Excellent</h2>
-            <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem maxime nam porro possimus fugiat quo molestiae illo.</p>
-
-            <div class="d-flex align-items-center custom-icon-wrap mb-3">
-              <span class="custom-icon-inner mr-3"><span class="icon icon-graduation-cap"></span></span>
-              <div><h3 class="m-0">22,931 Yearly Graduates</h3></div>
-            </div>
-
-            <div class="d-flex align-items-center custom-icon-wrap">
-              <span class="custom-icon-inner mr-3"><span class="icon icon-university"></span></span>
-              <div><h3 class="m-0">150 Universities Worldwide</h3></div>
-            </div>
-
+            <h2 class="text-black mb-4">Tweepy</h2>
+            <p class="mb-4">An easy-to-use Python library for accessing the Twitter API.</p>
           </div>
         </div>
 
         <div class="row mb-5 align-items-center">
           <div class="col-lg-7 mb-5" data-aos="fade-up" data-aos-delay="100">
-            <img src="./static/images/undraw_teacher.svg" alt="Image" class="img-fluid">
+            <img src="./static/images/undraw_predictive_analytics.svg" alt="Image" class="img-fluid">
           </div>
           <div class="col-lg-4 ml-auto" data-aos="fade-up" data-aos-delay="200">
-            <h2 class="text-black mb-4">Education is life</h2>
-            <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem maxime nam porro possimus fugiat quo molestiae illo.</p>
-
-            <div class="d-flex align-items-center custom-icon-wrap mb-3">
-              <span class="custom-icon-inner mr-3"><span class="icon icon-graduation-cap"></span></span>
-              <div><h3 class="m-0">22,931 Yearly Graduates</h3></div>
-            </div>
-
-            <div class="d-flex align-items-center custom-icon-wrap">
-              <span class="custom-icon-inner mr-3"><span class="icon icon-university"></span></span>
-              <div><h3 class="m-0">150 Universities Worldwide</h3></div>
-            </div>
-
+            <h2 class="text-black mb-4">Vader Sentiment Analyzer</h2>
+            <p class="mb-4">VADER (Valence Aware Dictionary and sEntiment Reasoner) is a lexicon and rule-based sentiment analysis tool that is specifically attuned to sentiments expressed in social media, and works well on texts from other domains.</p>
           </div>
         </div>
 
-      </div>
-    </div>
-
-    <div class="site-section" id="teachers-section">
-      <div class="container">
-
-        <div class="row mb-5 justify-content-center">
-          <div class="col-lg-7 mb-5 text-center"  data-aos="fade-up" data-aos-delay="">
-            <h2 class="section-title">Our Teachers</h2>
-            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam repellat aut neque! Doloribus sunt non aut reiciendis, vel recusandae obcaecati hic dicta repudiandae in quas quibusdam ullam, illum sed veniam!</p>
+        <div class="row mb-5 align-items-center">
+          <div class="col-lg-7 mb-5 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+            <img src="./static/images/undraw_settings.svg" alt="Image" class="img-fluid">
           </div>
-        </div>
-
-        <div class="row">
-
-          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="teacher text-center">
-              <img src="./static/images/person_1.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
-              <div class="py-2">
-                <h3 class="text-black">Benjamin Stone</h3>
-                <p class="position">Physics Teacher</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro eius suscipit delectus enim iusto tempora, adipisci at provident.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="teacher text-center">
-              <img src="./static/images/person_2.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
-              <div class="py-2">
-                <h3 class="text-black">Katleen Stone</h3>
-                <p class="position">Physics Teacher</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro eius suscipit delectus enim iusto tempora, adipisci at provident.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="teacher text-center">
-              <img src="./static/images/person_3.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
-              <div class="py-2">
-                <h3 class="text-black">Sadie White</h3>
-                <p class="position">Physics Teacher</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro eius suscipit delectus enim iusto tempora, adipisci at provident.</p>
-              </div>
-            </div>
+          <div class="col-lg-4 mr-auto order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="text-black mb-4">Pandas</h2>
+            <p class="mb-4">An open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="site-section bg-image overlay" style="background-image: url('./static/images/hero_1.jpg');">
-      <div class="container">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-md-8 text-center testimony">
-            <img src="./static/images/person_4.jpg" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
-            <h3 class="mb-4">Jerome Jensen</h3>
-            <blockquote>
-              <p>&ldquo; Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum rem soluta sit eius necessitatibus voluptate excepturi beatae ad eveniet sapiente impedit quae modi quo provident odit molestias! Rem reprehenderit assumenda &rdquo;</p>
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="site-section pb-0">
+    <div class="site-section pb-0" id='contact-section'>
 
       <div class="future-blobs">
         <div class="blob_2">
@@ -313,62 +222,6 @@
         </div>
       </div>
     </div>
-
-    
-
-
-
-    <div class="site-section bg-light" id="contact-section">
-      <div class="container">
-
-        <div class="row justify-content-center">
-          <div class="col-md-7">
-
-
-            
-            <h2 class="section-title mb-3">Message Us</h2>
-            <p class="mb-5">Natus totam voluptatibus animi aspernatur ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore molestias blanditiis consequuntur sunt nisi.</p>
-          
-            <form method="post" data-aos="fade">
-              <div class="form-group row">
-                <div class="col-md-6 mb-3 mb-lg-0">
-                  <input type="text" class="form-control" placeholder="First name">
-                </div>
-                <div class="col-md-6">
-                  <input type="text" class="form-control" placeholder="Last name">
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <div class="col-md-12">
-                  <input type="text" class="form-control" placeholder="Subject">
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <div class="col-md-12">
-                  <input type="email" class="form-control" placeholder="Email">
-                </div>
-              </div>
-              <div class="form-group row">
-                <div class="col-md-12">
-                  <textarea class="form-control" id="" cols="30" rows="10" placeholder="Write your message here."></textarea>
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <div class="col-md-6">
-                  
-                  <input type="submit" class="btn btn-primary py-3 px-5 btn-block btn-pill" value="Send Message">
-                </div>
-              </div>
-
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    
      
     <footer class="footer-section bg-white">
       <div class="container">
@@ -384,7 +237,6 @@
               <li><a href="#">Home</a></li>
               <li><a href="#">Courses</a></li>
               <li><a href="#">Programs</a></li>
-              <li><a href="#">Teachers</a></li>
             </ul>
           </div>
 
@@ -401,7 +253,7 @@
 
         </div>
 
-        <div class="row pt-5 mt-5 text-center">
+        <div class="row pt-5 text-center">
           <div class="col-md-12">
             <div class="border-top pt-5">
             <p>

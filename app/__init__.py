@@ -34,7 +34,41 @@ def analyze():
 
     head = data.head(10)
 
-    return render_template('analyze.html', head=head)
+    sid = SentimentIntensityAnalyzer()
+
+    listy = []
+
+    for index, row in data.iterrows():
+        ss = sid.polarity_scores(row["Tweets"])
+        listy.append(ss)
+    
+    se = pd.Series(listy)
+    data['polarity'] = se.values
+
+    # display(data.head(100))
+    # print(se.values[0])
+
+    negative = []
+    for ne in se.values:
+        if ne['neg'] > 0:
+            negative.append(ne['neg'])
+        
+    print(len(negative))
+
+    positive = []
+    for ps in se.values:
+        if ps['pos'] > 0:
+            positive.append(ps['pos'])
+
+    print(len(positive))
+    neutral = []
+    for nt in se.values:
+        if nt['neu'] > 0:
+            neutral.append(nt['neu'])
+
+    print(len(neutral))
+
+    return render_template('analyze.html', negative = len(negative), positive = len(positive), neutral=len(neutral))
 
 
 if __name__ == '__main__':
