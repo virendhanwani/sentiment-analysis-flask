@@ -69,3 +69,6 @@ def analyze():
     print(len(neutral))
 
     return render_template('analyze.html', negative = len(negative), positive = len(positive), neutral=len(neutral))
+
+if __name__ == "__main__":
+    app.run(debug=True)

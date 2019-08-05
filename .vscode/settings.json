@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\viren\\.virtualenvs\\sentiment-analysis-flask-VhgCBB4D\\Scripts\\python.exe",
+    "python.pythonPath": "/home/viren/.local/share/virtualenvs/sentiment-analysis-flask-LQKQWWOl/bin/python",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true
 }
