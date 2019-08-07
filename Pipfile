@@ -5,6 +5,7 @@ verify_ssl = true
 
 [dev-packages]
 pylint = "*"
+autopep8 = "*"
 
 [packages]
 flask = "*"
@@ -13,6 +14,7 @@ tweepy = "*"
 vadersentiment = "*"
 python-dotenv = "*"
 gunicorn = "*"
+frozen-flask = "*"
 
 [requires]
 python_version = "3.7"
