@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 import tweepy
 import pandas as pd
 import code
@@ -12,6 +12,7 @@ load_dotenv(dotenv_path)
 
 @app.route('/')
 def index():
+    # code.interact(local=dict(globals(), **locals()))
     return render_template('index.html')
 
 
@@ -28,7 +29,6 @@ def analyze():
     api = tweepy.API(auth)
     search_term = request.form['search']
     tweets = api.search(search_term, count=200)
-    # code.interact(local=dict(globals(), **locals()))
 
     data = pd.DataFrame(
         data=[tweet.text for tweet in tweets], columns=['Tweets'])
@@ -69,7 +69,7 @@ def analyze():
 
     print(len(neutral))
 
-    return render_template('analyze.html', negative=len(negative), positive=len(positive), neutral=len(neutral))
+    return redirect(url_for('index', _anchor='courses-section', negative=len(negative), positive=len(positive), neutral=len(neutral)))
 
 
 if __name__ == "__main__":
