@@ -69,7 +69,12 @@ def analyze():
 
     print(len(neutral))
 
-    return redirect(url_for('index', _anchor='courses-section', negative=len(negative), positive=len(positive), neutral=len(neutral)))
+    neg_percent = (len(negative)/200)*100
+
+    pos_percent = (len(positive)/200)*100
+    neu_percent = (len(neutral)/200)*100
+
+    return redirect(url_for('index', _anchor='courses-section', negative=neg_percent, positive=pos_percent, neutral=neu_percent))
 
 
 if __name__ == "__main__":

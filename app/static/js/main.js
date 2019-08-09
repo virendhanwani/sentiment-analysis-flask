@@ -7,6 +7,10 @@ AOS.init({
 jQuery(document).ready(function($) {
   "use strict";
 
+  console.log({{ request.args.get("negative")}})
+  console.log({{ request.args.get("positive") }})
+  console.log({{ request.args.get("neutral") }})
+
   var siteMenuClone = function() {
     $(".js-clone-nav").each(function() {
       var $this = $(this);
