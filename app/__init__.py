@@ -21,18 +21,18 @@ def index():
 
 @app.route('/analyze', methods=['POST'])
 def analyze():
-    consumer_key = 'tI1A1TXXpYqALOEXQ8GrTYTaE'
-    consumer_secret = 'qKrpnuD9qGEA7DTgLVkna1sSqLvTjpjqhTLAALZ1IjyOpw26Qx'
-    access_token = '1398879151-H6Sjo2ujuLYYIBhdEY79jT2w5wFStehEPXD9d5E'
-    access_token_secret = 'JnX173zNIzJ5jOaTYxpUkEhK2hjJzZJZVNwaag3qERvp1'
+    # code.interact(local=dict(globals(), **locals()))
+    consumer_key = os.environ.get('CONSUMER_KEY')
+    consumer_secret = os.environ.get('CONSUMER_SECRET')
+    access_token = os.environ.get('ACCESS_TOKEN')
+    access_token_secret = os.environ.get('ACCESS_TOKEN_SECRET')
 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
 
     api = tweepy.API(auth)
     search_term = request.form['search']
-    # code.interact(local=dict(globals(), **locals()))
-    tweets = api.search(search_term, count=200)
+    tweets = api.search(search_term, count=500)
 
     data = pd.DataFrame(
         data=[tweet.text for tweet in tweets], columns=['Tweets'])
@@ -73,12 +73,12 @@ def analyze():
 
     print(len(neutral))
 
-    neg_percent = (len(negative)/200)*100
+    neg_percent = round((len(negative)/500)*100, 2)
 
-    pos_percent = (len(positive)/200)*100
-    neu_percent = (len(neutral)/200)*100
+    pos_percent = round((len(positive)/500)*100, 2)
+    neu_percent = round((len(neutral)/500)*100, 2)
 
-    return redirect(url_for('index', _anchor='courses-section', negative=neg_percent, positive=pos_percent, neutral=neu_percent,analyzed='true'))
+    return redirect(url_for('index', _anchor='results-section', negative=neg_percent, positive=pos_percent, neutral=neu_percent,analyzed='true'))
 
 
 if __name__ == "__main__":
